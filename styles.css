@@ -1,0 +1,171 @@
+/* Base Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F0FFF0; /* Light green background for the body */
+    color: #333;
+}
+
+/* Custom Scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #4CAF50; /* A good shade of green */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #388E3C; /* Darker green on hover */
+}
+
+/* Ensure images fill their container and maintain aspect ratio */
+.portfolio-img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency in grid */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 8px;
+}
+
+/* Smooth transition for page content */
+.page-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.page-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Simple modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Custom Header Styles */
+.custom-header {
+    background-color: #2E7D32; /* A darker shade of green for the header background */
+    color: white; /* White text for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.custom-header .site-title {
+    color: #E8F5E9; /* Lighter green for the site title */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtle text shadow */
+}
+
+.custom-header .nav-link {
+    color: #C8E6C9; /* Lighter green for navigation links */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-header .nav-link:hover {
+    color: #FFFFFF; /* White on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.custom-header .mobile-menu-button svg,
+.custom-header .close-mobile-menu svg {
+    color: white; /* White icon for mobile menu button */
+}
+
+.custom-header .mobile-menu {
+    background-color: #388E3C; /* Green background for mobile menu */
+}
+
+.custom-header .mobile-menu .nav-link {
+    color: #E8F5E9; /* Lighter green for mobile menu links */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle separator */
+}
+
+.custom-header .mobile-menu .nav-link:hover {
+    background-color: #4CAF50; /* Slightly lighter green on hover */
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Enhanced Card Hover Effects */
+.hover-lift-shadow:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #4CAF50; /* Green border glow */
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Focus Effect */
+input:focus, textarea:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3); /* Subtle green glow */
+}
+
+/* Social Media Icon Hover Effect */
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #FFFFFF; /* White on hover */
+}
+
+/* Search Highlight */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
