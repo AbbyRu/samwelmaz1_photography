@@ -12,6 +12,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- External CSS File -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom style for the hero section background image */
+        .hero-background {
+            background-image: url('image_0e01d9.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 400px; /* Ensure enough height for the background image */
+        }
+        /* Ensure text does not overlap by adjusting overlay opacity and padding */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for better text readability */
+            padding: 2rem; /* Add padding to prevent text from touching edges */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 767px) {
+            .hero-background {
+                min-height: 300px; /* Slightly reduce height on small screens */
+            }
+            .hero-overlay h1 {
+                font-size: 3rem; /* Adjust font size for smaller screens */
+                line-height: 1.2;
+            }
+            .hero-overlay p {
+                font-size: 1.125rem; /* Adjust font size for smaller screens */
+                margin-bottom: 1.5rem; /* Adjust margin */
+            }
+            .hero-overlay a {
+                padding: 0.75rem 2rem; /* Adjust button padding */
+                font-size: 0.875rem; /* Adjust button font size */
+            }
+        }
+    </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
@@ -22,10 +56,12 @@
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="index.html" class="nav-link font-medium transition duration-300">Home</a></li>
-                    <li><a href="#" class="nav-link font-medium transition duration-300" onclick="showPage('services'); return false;">Services</a></li>
+                    <!-- Re-added onclick to directly call showPage for immediate navigation -->
+                    <li><a href="#services" class="nav-link font-medium transition duration-300" onclick="showPage('services'); return false;">Services</a></li>
                     <li><a href="rates.html" class="nav-link font-medium transition duration-300">Rates</a></li>
                     <li><a href="portfolio.html" class="nav-link font-medium transition duration-300">Portfolio</a></li>
-                    <li><a href="#" class="nav-link font-medium transition duration-300" onclick="showPage('contact'); return false;">Contact</a></li>
+                    <!-- Re-added onclick to directly call showPage for immediate navigation -->
+                    <li><a href="#contact" class="nav-link font-medium transition duration-300" onclick="showPage('contact'); return false;">Contact</a></li>
                 </ul>
             </nav>
             <!-- Search Bar in Header (Desktop) -->
@@ -54,10 +90,12 @@
             </div>
             <ul class="flex flex-col p-4 space-y-4">
                 <li><a href="index.html" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="closeMobileMenu();">Home</a></li>
-                <li><a href="#" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('services'); closeMobileMenu(); return false;">Services</a></li>
+                <!-- Re-added onclick to directly call showPage for immediate navigation -->
+                <li><a href="#services" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('services'); closeMobileMenu(); return false;">Services</a></li>
                 <li><a href="rates.html" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="closeMobileMenu();">Rates</a></li>
                 <li><a href="portfolio.html" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="closeMobileMenu();">Portfolio</a></li>
-                <li><a href="#" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('contact'); closeMobileMenu(); return false;">Contact</a></li>
+                <!-- Re-added onclick to directly call showPage for immediate navigation -->
+                <li><a href="#contact" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('contact'); closeMobileMenu(); return false;">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -78,12 +116,11 @@
 
         <!-- Home Page -->
         <section id="home" class="page-content active">
-            <div class="relative bg-gradient-to-r from-green-700 to-emerald-900 text-white rounded-xl shadow-lg overflow-hidden mb-12">
-                <img src="images/corporate3.jpg" alt="Hero Image" class="w-full h-96 object-cover opacity-70">
-                <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
-                    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg animate-fadeInUp" style="animation-delay: 0.2s;">Capture Life's Beautiful Moments</h1><br>
-
-                    <br>
+            <div class="relative bg-gradient-to-r from-green-700 to-emerald-900 text-white rounded-xl shadow-lg overflow-hidden mb-12 hero-background">
+                <!-- Removed img tag as background is set via CSS -->
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center hero-overlay">
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg animate-fadeInUp" style="animation-delay: 0.2s;">Capture Life's Beautiful Moments</h1>
+                    <!-- Removed extra <br> tags, relying on Tailwind's mb-8 for spacing -->
                     <p class="text-xl md:text-2xl mb-8 max-w-2xl animate-fadeInUp" style="animation-delay: 0.4s;">At Samwelmaz Photography, we specialize in creating timeless images that tell your unique story.</p>
                     <a href="portfolio.html" class="bg-white text-green-800 hover:bg-green-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 animate-fadeInUp btn-primary" style="animation-delay: 0.6s;">View Our Portfolio</a>
                 </div>
@@ -109,15 +146,15 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500 hover-lift-shadow transition duration-300">
                         <p class="text-gray-700 italic mb-4">"Samwelmaz Photography captured our wedding day beautifully! Every photo tells a story, and we couldn't be happier with the results."</p>
-                        <p class="font-semibold text-green-600">- Dennis Kiarie</p>
+                        <p class="font-semibold text-green-600">- Jane Doe</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500 hover-lift-shadow transition duration-300">
                         <p class="text-gray-700 italic mb-4">"Professional, friendly, and incredibly talented. Our family portraits are simply stunning. Highly recommend!"</p>
-                        <p class="font-semibold text-emerald-600">- Ian Mungai</p>
+                        <p class="font-semibold text-emerald-600">- John Smith</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-lime-500 hover-lift-shadow transition duration-300">
                         <p class="text-gray-700 italic mb-4">"They made our corporate event look amazing. The photos were vibrant and truly captured the energy of the day."</p>
-                        <p class="font-semibold text-lime-600">- Doreen Njue</p>
+                        <p class="font-semibold text-lime-600">- Sarah Lee</p>
                     </div>
                 </div>
             </div>
@@ -275,9 +312,9 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
                     <div class="flex space-x-4">
-                        <a href="https://samwelmazphotography70.pixieset.com/purityshoot/" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Pixieset"><i class="fas fa-camera"></i></a>
-                        <a href="https://gurushots.com/maz_wansamwel/photos" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="GuruShots"><i class="fas fa-trophy"></i></a>
-                        <a href="https://www.instagram.com/samwelmaz/?hl=en" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pixieset.com/your-samwelmaz-page" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Pixieset"><i class="fas fa-camera"></i></a>
+                        <a href="https://gurushots.com/your-samwelmaz-profile" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="GuruShots"><i class="fas fa-trophy"></i></a>
+                        <a href="https://instagram.com/samwelmazphotography" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="text-green-200 text-sm flex flex-col items-center md:items-start space-y-2">
                         <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:maz@otherside.co.ke" class="hover:underline">maz@otherside.co.ke</a></p>
@@ -311,5 +348,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
