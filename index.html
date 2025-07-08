@@ -18,13 +18,13 @@
     <!-- Header -->
     <header class="custom-header py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="site-title text-2xl font-bold" onclick="showPage('home'); return false;">Samwelmaz Photography</a>
+            <a href="index.html" class="site-title text-2xl font-bold">Samwelmaz Photography</a>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="nav-link font-medium transition duration-300" onclick="showPage('home'); return false;">Home</a></li>
+                    <li><a href="index.html" class="nav-link font-medium transition duration-300">Home</a></li>
                     <li><a href="#" class="nav-link font-medium transition duration-300" onclick="showPage('services'); return false;">Services</a></li>
-                    <li><a href="#" class="nav-link font-medium transition duration-300" onclick="showPage('rates'); return false;">Rates</a></li>
-                    <li><a href="#" class="nav-link font-medium transition duration-300" onclick="showPage('portfolio'); return false;">Portfolio</a></li>
+                    <li><a href="rates.html" class="nav-link font-medium transition duration-300">Rates</a></li>
+                    <li><a href="portfolio.html" class="nav-link font-medium transition duration-300">Portfolio</a></li>
                     <li><a href="#" class="nav-link font-medium transition duration-300" onclick="showPage('contact'); return false;">Contact</a></li>
                 </ul>
             </nav>
@@ -53,10 +53,10 @@
                 </button>
             </div>
             <ul class="flex flex-col p-4 space-y-4">
-                <li><a href="#" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('home'); closeMobileMenu(); return false;">Home</a></li>
+                <li><a href="index.html" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="closeMobileMenu();">Home</a></li>
                 <li><a href="#" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('services'); closeMobileMenu(); return false;">Services</a></li>
-                <li><a href="#" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('rates'); closeMobileMenu(); return false;">Rates</a></li>
-                <li><a href="#" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('portfolio'); closeMobileMenu(); return false;">Portfolio</a></li>
+                <li><a href="rates.html" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="closeMobileMenu();">Rates</a></li>
+                <li><a href="portfolio.html" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="closeMobileMenu();">Portfolio</a></li>
                 <li><a href="#" class="block text-lg py-2 rounded-md transition duration-300 nav-link" onclick="showPage('contact'); closeMobileMenu(); return false;">Contact</a></li>
             </ul>
         </nav>
@@ -83,7 +83,7 @@
                 <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
                     <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg animate-fadeInUp" style="animation-delay: 0.2s;">Capture Life's Beautiful Moments</h1>
                     <p class="text-xl md:text-2xl mb-8 max-w-2xl animate-fadeInUp" style="animation-delay: 0.4s;">At Samwelmaz Photography, we specialize in creating timeless images that tell your unique story.</p>
-                    <button class="bg-white text-green-800 hover:bg-green-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 animate-fadeInUp btn-primary" style="animation-delay: 0.6s;" onclick="showPage('portfolio');">View Our Portfolio</button>
+                    <a href="portfolio.html" class="bg-white text-green-800 hover:bg-green-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 animate-fadeInUp btn-primary" style="animation-delay: 0.6s;">View Our Portfolio</a>
                 </div>
             </div>
 
@@ -221,133 +221,6 @@
             </div>
         </section>
 
-        <!-- Rates Page -->
-        <section id="rates" class="page-content hidden">
-            <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Our Rates</h1>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-                We offer flexible pricing packages designed to meet your specific photography needs. Below are our standard rates; custom quotes are available upon request.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Package 1: Basic -->
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center border-t-4 border-green-500 transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Basic Package</h3>
-                    <p class="text-5xl font-extrabold text-green-600 mb-6">$250</p>
-                    <ul class="text-gray-700 text-left space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> 1 Hour Session</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> 1 Location</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> 20 Edited Digital Photos</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">&#10003;</span> Online Gallery</li>
-                    </ul>
-                    <button class="bg-green-600 text-white hover:bg-green-700 py-3 px-8 rounded-full font-semibold shadow-md transition duration-300 btn-primary" onclick="showPage('contact');">Book Now</button>
-                </div>
-
-                <!-- Package 2: Standard -->
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center border-t-4 border-emerald-500 transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Standard Package</h3>
-                    <p class="text-5xl font-extrabold text-emerald-600 mb-6">$500</p>
-                    <ul class="text-gray-700 text-left space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">&#10003;</span> 2 Hour Session</li>
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">&#10003;</span> Up to 2 Locations</li>
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">&#10003;</span> 40 Edited Digital Photos</li>
-                        <li class="flex items-center"><span class="text-emerald-500 mr-2">&#10003;</span> Online Gallery + Print Release</li>
-                    </ul>
-                    <button class="bg-emerald-600 text-white hover:bg-emerald-700 py-3 px-8 rounded-full font-semibold shadow-md transition duration-300 btn-primary" onclick="showPage('contact');">Book Now</button>
-                </div>
-
-                <!-- Package 3: Premium -->
-                <div class="bg-white rounded-xl shadow-lg p-8 text-center border-t-4 border-lime-500 transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Premium Package</h3>
-                    <p class="text-5xl font-extrabold text-lime-600 mb-6">$850</p>
-                    <ul class="text-gray-700 text-left space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-lime-500 mr-2">&#10003;</span> 4 Hour Session</li>
-                        <li class="flex items-center"><span class="text-lime-500 mr-2">&#10003;</span> Multiple Locations</li>
-                        <li class="flex items-center"><span class="text-lime-500 mr-2">&#10003;</span> 80+ Edited Digital Photos</li>
-                        <li class="flex items-center"><span class="text-lime-500 mr-2">&#10003;</span> Online Gallery + Print Release + Photo Album</li>
-                    </ul>
-                    <button class="bg-lime-600 text-white hover:bg-lime-700 py-3 px-8 rounded-full font-semibold shadow-md transition duration-300 btn-primary" onclick="showPage('contact');">Book Now</button>
-                </div>
-            </div>
-
-            <!-- Service Package Suggester Section -->
-            <div class="mt-12 p-8 bg-green-50 rounded-xl shadow-inner text-center">
-                <h2 class="text-3xl font-bold text-green-800 mb-4">Suggest a Package ✨</h2>
-                <p class="text-green-700 text-lg mb-6">
-                    Unsure which package fits your needs? Describe your event or requirements, and our AI will suggest the best option for you!
-                </p>
-                <textarea id="package-needs" rows="3" class="shadow-sm appearance-none border rounded-md w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition duration-200 mb-4" placeholder="e.g., 'Small outdoor wedding with 50 guests, ceremony and reception coverage.'"></textarea>
-                <button id="suggest-package-button" class="bg-green-700 text-white hover:bg-green-800 py-3 px-8 rounded-full font-semibold shadow-md transition duration-300 transform hover:scale-105 btn-primary">
-                    Suggest Package ✨
-                </button>
-                <div id="package-suggestion-output" class="mt-6 p-4 bg-white rounded-md shadow-md text-left text-gray-800 hidden">
-                    <p class="font-semibold mb-2">Our Suggestion:</p>
-                    <p id="suggested-text" class="text-gray-700 italic"></p>
-                </div>
-                <div id="package-loading" class="mt-4 text-green-700 hidden">
-                    Generating suggestion...
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Page -->
-        <section id="portfolio" class="page-content hidden">
-            <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Our Portfolio</h1>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-                Explore our diverse collection of work, showcasing our passion for capturing life's most precious moments. From vibrant events to intimate portraits, each image tells a unique story.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Portfolio Item 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <img src="https://placehold.co/600x400/90EE90/000000?text=Wedding+Photography" alt="Wedding Photography" class="portfolio-img">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Weddings</h3>
-                        <p class="text-gray-600 text-sm">Capturing the magic and emotion of your special day.</p>
-                    </div>
-                </div>
-                <!-- Portfolio Item 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <img src="https://placehold.co/600x400/AEC6CF/000000?text=Portrait+Photography" alt="Portrait Photography" class="portfolio-img">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Portraits</h3>
-                        <p class="text-gray-600 text-sm">Timeless portraits that reflect your unique personality.</p>
-                    </div>
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <img src="https://placehold.co/600x400/D4EDDA/000000?text=Event+Photography" alt="Event Photography" class="portfolio-img">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Events</h3>
-                        <p class="text-gray-600 text-sm">Documenting the energy and highlights of your events.</p>
-                    </div>
-                </div>
-                <!-- Portfolio Item 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <img src="https://placehold.co/600x400/CBAACB/000000?text=Family+Photography" alt="Family Photography" class="portfolio-img">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Family</h3>
-                        <p class="text-gray-600 text-sm">Creating beautiful memories for your family to cherish.</p>
-                    </div>
-                </div>
-                <!-- Portfolio Item 5 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <img src="https://placehold.co/600x400/FADBD8/000000?text=Commercial+Photography" alt="Commercial Photography" class="portfolio-img">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Commercial</h3>
-                        <p class="text-gray-600 text-sm">Professional imagery for your brand and business needs.</p>
-                    </div>
-                </div>
-                <!-- Portfolio Item 6 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300 hover-lift-shadow">
-                    <img src="https://placehold.co/600x400/87CEEB/000000?text=Landscape+Photography" alt="Landscape Photography" class="portfolio-img">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Landscape</h3>
-                        <p class="text-gray-600 text-sm">Breathtaking views captured with artistic vision.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Page -->
         <section id="contact" class="page-content hidden">
             <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Contact Us</h1>
@@ -382,9 +255,9 @@
 
                 <div class="mt-10 text-center border-t border-gray-200 pt-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4">Direct Contact</h2>
-                    <p class="text-gray-700 mb-2">Email: <a href="mailto:info@samwelmazphotography.com" class="text-green-600 hover:underline">info@samwelmazphotography.com</a></p>
-                    <p class="text-gray-700 mb-2">Phone: <a href="tel:+1234567890" class="text-green-600 hover:underline">+1 (234) 567-890</a></p>
-                    <p class="text-gray-700">Address: 123 Photo Lane, Creativille, CA 90210</p>
+                    <p class="text-gray-700 mb-2">Email: <a href="mailto:maz@otherside.co.ke" class="text-green-600 hover:underline">maz@otherside.co.ke</a></p>
+                    <p><i class="fas fa-phone mr-2"></i> <a href="tel:+254717103182" class="text-green-600 hover:underline">0717103182</a></p>
+                    <p class="text-700">Address: Nairobi, Kenya</p>
                 </div>
             </div>
         </section>
@@ -400,15 +273,14 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
                     <div class="flex space-x-4">
-                        <a href="https://facebook.com/samwelmazphotography" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://pixieset.com/your-samwelmaz-page" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Pixieset"><i class="fas fa-camera"></i></a>
+                        <a href="https://gurushots.com/your-samwelmaz-profile" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="GuruShots"><i class="fas fa-trophy"></i></a>
                         <a href="https://instagram.com/samwelmazphotography" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/samwelmazphotography" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://linkedin.com/company/samwelmazphotography" target="_blank" class="text-green-300 hover:text-white transition duration-300 text-2xl social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <div class="text-green-200 text-sm flex flex-col items-center md:items-start space-y-2">
-                        <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:info@samwelmazphotography.com" class="hover:underline">info@samwelmazphotography.com</a></p>
-                        <p><i class="fas fa-phone mr-2"></i> <a href="tel:+1234567890" class="hover:underline">+1 (234) 567-890</a></p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> 123 Photo Lane, Creativille, CA 90210</p>
+                        <p><i class="fas fa-envelope mr-2"></i> <a href="mailto:maz@otherside.co.ke" class="hover:underline">maz@otherside.co.ke</a></p>
+                        <p><i class="fas fa-phone mr-2"></i> <a href="tel:+254717103182" class="hover:underline">0717103182</a></p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Nairobi, Kenya</p>
                     </div>
                 </div>
             </div>
@@ -437,4 +309,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
